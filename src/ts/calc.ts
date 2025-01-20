@@ -1,7 +1,7 @@
 
 export function calc() {
   const time = (document.getElementById("timeInput") as HTMLInputElement)?.value;
-  if (!Number.isNaN(time)) {
+  if (time.length && !Number.isNaN(time)) {
     const result = Math.floor(Number.parseFloat(time) * 60);
     const resultElement = document.getElementById("timeOutput") as HTMLInputElement;
     if (resultElement) {
